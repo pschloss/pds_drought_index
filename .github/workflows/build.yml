@@ -11,9 +11,14 @@ jobs:
     - name: Display the path
       shell: bash
       run: |
-        echo $PATH \
-        echo $PWD \
-        ls
+        echo $PATH
+    - name: Display the working directory
+      shell: bash
+      run: |
+        echo $PWD
+    - name: Display the directory contents
+      shell: bash
+      run: ls
     - name: Run Snakemake
       uses: snakemake/snakemake-github-action@v1
       with:
