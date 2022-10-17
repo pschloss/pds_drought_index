@@ -7,8 +7,6 @@ rule targets:
         "data/ghcnd_tidy.tsv.gz",
         "data/ghcnd_regions_years.tsv",
         "visuals/world_drought.png"
-    conda: "environment.yml"
-
 
 rule get_all_archive:
     input:
