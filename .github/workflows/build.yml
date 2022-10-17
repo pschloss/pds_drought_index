@@ -9,7 +9,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: pds_drought_index/
+        working-directory: ./
 
     steps:
       - name: Run Snakemake
