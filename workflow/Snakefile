@@ -1,11 +1,5 @@
 rule targets:
     input:
-        "data/ghcnd_all.tar.gz",
-        "data/ghcnd_all_files.txt",
-        "data/ghcnd-inventory.txt",
-        "data/ghcnd-stations.txt",
-        "data/ghcnd_tidy.tsv.gz",
-        "data/ghcnd_regions_years.tsv",
         "visuals/world_drought.png"
 
 rule get_all_archive:
