@@ -11,7 +11,7 @@ jobs:
     - name: Display the path
       shell: bash
       run: |
-        echo $PATH
+        echo $PATH \
         echo $PWD
     - name: Run Snakemake
       uses: snakemake/snakemake-github-action@v1
