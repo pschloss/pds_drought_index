@@ -11,7 +11,7 @@ jobs:
     - name: Building
       uses: snakemake/snakemake-github-action@v1
       with:
-        directory: '.test'
+        directory: '.'
         snakefile: 'workflow/Snakefile'
         args: '--cores 1 --use-conda'
         stagein: '' # additional preliminary commands to run (can be multiline)
