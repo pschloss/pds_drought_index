@@ -6,20 +6,13 @@ jobs:
   build:
     name: build
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .
 
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Install Conda environment from environment.yml
-        uses: mamba-org/provision-with-micromamba@main
-        shell: bash -l {0}
-        run: |
-          conda env list
-          snakemake --version
-
-
-      # Linux and macOS
-      - name: List envirnonments
-        shell: bash -l {0}
-        run: |
-          conda env list
+      - name: Run Snakemake
+        uses: snakemake/snakemake-github-action@v1
+        with:
+          directory: '.test'
+          snakefile: 'Snakefile'
