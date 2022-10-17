@@ -7,6 +7,7 @@ rule targets:
         "data/ghcnd_tidy.tsv.gz",
         "data/ghcnd_regions_years.tsv",
         "visuals/world_drought.png"
+    conda: "environment.yml"
 
 
 rule get_all_archive:
@@ -20,6 +21,7 @@ rule get_all_archive:
         """
         {input.script} {params.file}
         """
+    conda: "environment.yml"
 
    
 rule get_all_filenames:
@@ -30,6 +32,7 @@ rule get_all_filenames:
         "data/ghcnd_all_files.txt"
     shell:
         "{input.script}"
+    conda: "environment.yml"
 
 rule get_inventory:
     input:
@@ -42,6 +45,7 @@ rule get_inventory:
         """
         {input.script} {params.file}
         """
+    conda: "environment.yml"
 
 rule get_station_data:
     input:
@@ -54,6 +58,7 @@ rule get_station_data:
         """
         {input.script} {params.file}
         """
+    conda: "environment.yml"
 
 
 rule summarize_dly_files:
@@ -67,7 +72,8 @@ rule summarize_dly_files:
         """
         {input.bash_script}
         """
- 
+     conda: "environment.yml"
+
 rule get_regions_years:
     input:
         r_script = "code/get_regions_years.R",
@@ -78,6 +84,7 @@ rule get_regions_years:
         """
         {input.r_script}
         """
+    conda: "environment.yml"
 
 rule plot_drought_by_region:
     input: 
@@ -90,4 +97,5 @@ rule plot_drought_by_region:
         """
         {input.r_script}
         """
+    conda: "environment.yml"
 
