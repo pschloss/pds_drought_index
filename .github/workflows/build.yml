@@ -11,7 +11,7 @@ jobs:
     - name: Building
       uses: snakemake/snakemake-github-action@v1
       with:
-        directory: '.build'
-        snakefile: '/Snakefile'
+        directory: '/'
+        snakefile: 'Snakefile'
         args: '--cores 1'
         stagein: 'conda env create -f environment.yml; conda activate drought' # additional preliminary commands to run (can be multiline)
