@@ -12,6 +12,11 @@ jobs:
 
       - name: Install Conda environment from environment.yml
         uses: mamba-org/provision-with-micromamba@main
+        shell: bash -l {0}
+        run: |
+          conda env list
+          snakemake --version
+
 
       # Linux and macOS
       - name: List envirnonments
