@@ -1,0 +1,1 @@
+![](../visuals/world_drought.png)
