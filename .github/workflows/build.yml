@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Run Snakemake
-        uses: snakemake/snakemake-github-action@v1.23
+        uses: snakemake/snakemake-github-action@v1
         with:
           directory: '.test'
           snakefile: 'Snakefile'
