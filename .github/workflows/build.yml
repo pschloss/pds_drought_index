@@ -24,5 +24,6 @@ jobs:
       with:
         directory: .test
         snakefile: workflow/Snakefile
-        args: "--cores 1 --printshellcmds --use-conda --conda-cleanup-pkgs cache"
+        args: "--lint"
+#        args: "--cores 1 --printshellcmds --use-conda --conda-cleanup-pkgs cache"
 
