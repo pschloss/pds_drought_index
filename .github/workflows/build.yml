@@ -22,8 +22,7 @@ jobs:
     - name: Run Snakemake
       uses: snakemake/snakemake-github-action@v1
       with:
-        directory: .test
+        directory: .
         snakefile: workflow/Snakefile
-        args: "--lint"
-#        args: "--cores 1 --printshellcmds --use-conda --conda-cleanup-pkgs cache"
+        args: "--cores 1 --printshellcmds --use-conda --conda-cleanup-pkgs cache"
 
