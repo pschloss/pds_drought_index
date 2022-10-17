@@ -12,11 +12,12 @@ jobs:
       shell: bash
       run: |
         echo $PATH \
-        echo $PWD
+        echo $PWD \
+        ls
     - name: Run Snakemake
       uses: snakemake/snakemake-github-action@v1
       with:
         directory: .test
-        snakefile: Snakefile
+        snakefile: workflow/Snakefile
         args: "--cores 1 --use-conda --conda-cleanup-pkgs cache"
 
