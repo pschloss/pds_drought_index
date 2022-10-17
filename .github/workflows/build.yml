@@ -8,13 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: .
+        working-directory: "."
 
-    steps:
-      - name: Run Snakemake
-        uses: snakemake/snakemake-github-action@v1
-        with:
-          directory: '.test'
-          snakefile: 'Snakefile'
-          args: '--cores 1 --use-conda --conda-cleanup-pkgs cache'
+  steps:
+    - name: Run Snakemake
+      uses: snakemake/snakemake-github-action@v1
+      with:
+        directory: '.test'
+        snakefile: 'Snakefile'
+        args: '--cores 1 --use-conda --conda-cleanup-pkgs cache'
 
