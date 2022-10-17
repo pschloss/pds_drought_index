@@ -3,13 +3,15 @@ rule targets:
         "visuals/world_drought.png"
 
 rule get_all_archive:
+    input:
+        "code/get_ghcnd_data.bash"
     output:
         "data/ghcnd_all.tar.gz"
     params:
         "ghcnd_all.tar.gz"
     shell:
         """
-        code/get_ghcnd_data.bash {params}
+        {input} {params}
         """
 
    
