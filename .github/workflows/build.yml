@@ -8,7 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: "."
+        shell: bash
+        working-directory: pds_drought_index/
 
     steps:
       - name: Run Snakemake
