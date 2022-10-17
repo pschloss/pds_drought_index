@@ -15,8 +15,3 @@ jobs:
         snakefile: 'Snakefile'
         args: '--cores 1 --use-conda --conda-cleanup-pkgs cache'
         stagein: 'conda env create -f environment.yml; conda activate drought' # additional preliminary commands to run (can be multiline)
-    - name: Push
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.head_ref }}
