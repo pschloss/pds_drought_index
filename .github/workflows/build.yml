@@ -14,7 +14,7 @@ jobs:
         uses: mamba-org/provision-with-micromamba@main
 
       # Linux and macOS
-      - name: Run Python
+      - name: List envirnonments
         shell: bash -l {0}
         run: |
-          python -c "import numpy"
+          conda env list
