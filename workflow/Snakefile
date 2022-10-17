@@ -21,7 +21,6 @@ rule get_all_archive:
         """
         {input.script} {params.file}
         """
-    conda: "environment.yml"
 
    
 rule get_all_filenames:
@@ -30,9 +29,9 @@ rule get_all_filenames:
         archive = "data/ghcnd_all.tar.gz"
     output:
         "data/ghcnd_all_files.txt"
+    conda: "environment.yml"
     shell:
         "{input.script}"
-    conda: "environment.yml"
 
 rule get_inventory:
     input:
@@ -45,7 +44,6 @@ rule get_inventory:
         """
         {input.script} {params.file}
         """
-    conda: "environment.yml"
 
 rule get_station_data:
     input:
@@ -58,7 +56,6 @@ rule get_station_data:
         """
         {input.script} {params.file}
         """
-    conda: "environment.yml"
 
 
 rule summarize_dly_files:
@@ -72,7 +69,6 @@ rule summarize_dly_files:
         """
         {input.bash_script}
         """
-     conda: "environment.yml"
 
 rule get_regions_years:
     input:
@@ -84,7 +80,6 @@ rule get_regions_years:
         """
         {input.r_script}
         """
-    conda: "environment.yml"
 
 rule plot_drought_by_region:
     input: 
@@ -97,5 +92,4 @@ rule plot_drought_by_region:
         """
         {input.r_script}
         """
-    conda: "environment.yml"
 
