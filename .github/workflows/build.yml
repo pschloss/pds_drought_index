@@ -18,7 +18,7 @@ jobs:
         echo $PWD
     - name: Display the directory contents
       shell: bash
-      run: ls
+      run: ls code/get_ghcnd_data.bash
     - name: Run Snakemake
       uses: snakemake/snakemake-github-action@v1
       with:
