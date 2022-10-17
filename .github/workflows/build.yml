@@ -11,7 +11,7 @@ jobs:
     - name: Building
       uses: snakemake/snakemake-github-action@v1
       with:
-        directory: '../../'
+        directory: '../../../'
         snakefile: 'Snakefile'
         args: '--cores 1'
         stagein: '' # additional preliminary commands to run (can be multiline)
