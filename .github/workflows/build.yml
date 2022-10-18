@@ -24,6 +24,9 @@ jobs:
       run: |
         chmod +x test.R
         ./test.R
+        Rscript --version
+        which Rscript
+        R --version
 #     - name: Run Snakemake
 #       uses: snakemake/snakemake-github-action@v1
 #       with:
