@@ -27,6 +27,11 @@ jobs:
         Rscript --version
         which Rscript
         R --version
+    - name: Install Conda environment with Micromamba
+      uses: mamba-org/provision-with-micromamba@main
+      with:
+        environment-file: workflow/envs/environment.yml
+        environment-name: drought
     - name: Run Snakemake
       uses: snakemake/snakemake-github-action@v1
       with:
