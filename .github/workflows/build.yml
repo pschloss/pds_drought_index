@@ -4,21 +4,25 @@ on: workflow_dispatch
 
 jobs:
   run_workflow:
+  
     runs-on: ubuntu-latest
+    
     steps:
     - name: Checkout repo
       uses: actions/checkout@v2 
+      
     - name: Display the path
       shell: bash
-      run: |
-        echo $PATH
+      run:  echo $PATH
+      
     - name: Display the working directory
       shell: bash
-      run: |
-        echo $PWD
+      run: echo $PWD
+        
     - name: Display the directory contents
       shell: bash
       run: ls data
+      
     - name: Which Rscript
       shell: bash
       run: |
@@ -27,6 +31,7 @@ jobs:
         Rscript --version
         which Rscript
         R --version
+        
     - name: Run Snakemake
       uses: snakemake/snakemake-github-action@v1
       with:
@@ -34,3 +39,15 @@ jobs:
         snakefile: workflow/Snakefile
         args: "--cores 1 --force --use-conda --conda-cleanup-pkgs cache visuals/world_drought.png"
 
+    - name: setup git config
+      run: |
+        # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
+        git config user.name "GitHub Actions Bot"
+        git config user.email "<>"
+
+    - name: commit
+      run: |
+        # Stage the file, commit and push
+        git add visuals/world_drought.png
+        git commit -m "New day"
+        git push origin master
