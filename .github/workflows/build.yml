@@ -27,10 +27,10 @@ jobs:
         Rscript --version
         which Rscript
         R --version
-#     - name: Run Snakemake
-#       uses: snakemake/snakemake-github-action@v1
-#       with:
-#         directory: .
-#         snakefile: workflow/Snakefile
-#         args: "--cores 1 --force --use-conda --conda-cleanup-pkgs cache visuals/world_drought.png"
+    - name: Run Snakemake
+      uses: snakemake/snakemake-github-action@v1
+      with:
+        directory: .
+        snakefile: workflow/Snakefile
+        args: "--cores 1 --force --use-conda --conda-cleanup-pkgs cache tester"
 
