@@ -87,6 +87,7 @@ rule plot_drought_by_region:
 
 rule tester:
     input: "test.R"
+    conda: envs/environment.yml
     shell:
         """
         which R
