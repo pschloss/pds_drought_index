@@ -50,4 +50,4 @@ jobs:
         # Stage the file, commit and push
         git add visuals/world_drought.png
         git commit -m "New day"
-        git push origin master
+        git push origin mair
