@@ -91,7 +91,4 @@ rule tester:
         """
         which R
         R --version
-        which Rscript
-        Rscript --version
-        #./test.R
         """
