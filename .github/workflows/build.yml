@@ -32,6 +32,9 @@ jobs:
       with:
         environment-file: workflow/envs/environment.yml
         environment-name: drought
+    - name: Load drought
+      shell: bash
+      run: conda activate drought
     - name: Run Snakemake
       uses: snakemake/snakemake-github-action@v1
       with:
