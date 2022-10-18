@@ -19,10 +19,13 @@ jobs:
     - name: Display the directory contents
       shell: bash
       run: ls data
-    - name: Run Snakemake
-      uses: snakemake/snakemake-github-action@v1
-      with:
-        directory: .
-        snakefile: workflow/Snakefile
-        args: "--cores 1 --force --use-conda --conda-cleanup-pkgs cache visuals/world_drought.png"
+    - name: Which Rscript
+      shell: bash
+      run: which Rscript
+#     - name: Run Snakemake
+#       uses: snakemake/snakemake-github-action@v1
+#       with:
+#         directory: .
+#         snakefile: workflow/Snakefile
+#         args: "--cores 1 --force --use-conda --conda-cleanup-pkgs cache visuals/world_drought.png"
 
