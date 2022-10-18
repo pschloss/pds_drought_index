@@ -34,7 +34,9 @@ jobs:
         environment-name: drought
     - name: Load drought
       shell: bash
-      run: conda activate drought
+      run: |
+        conda init bash
+        conda activate drought
     - name: Run Snakemake
       uses: snakemake/snakemake-github-action@v1
       with:
