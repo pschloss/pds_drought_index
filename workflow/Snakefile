@@ -85,3 +85,13 @@ rule plot_drought_by_region:
         {input.r_script}
         """
 
+rule tester:
+    input: "test.R"
+    shell:
+        """
+        which R
+        R --version
+        which Rscript
+        Rscript --version
+        ./test.R
+        """
