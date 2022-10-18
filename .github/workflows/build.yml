@@ -21,7 +21,9 @@ jobs:
       run: ls data
     - name: Which Rscript
       shell: bash
-      run: ./test.R
+      run: |
+        chmod +x test.R
+        ./test.R
 #     - name: Run Snakemake
 #       uses: snakemake/snakemake-github-action@v1
 #       with:
