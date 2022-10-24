@@ -1,6 +1,10 @@
 name: build
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '9 10 * * *'
+
 
 jobs:
   run_workflow:
