@@ -1,9 +1,8 @@
 name: build
 
 on:
-#  workflow_dispatch:
   schedule:
-    - cron:  '44 13 * * *'
+    - cron:  '50 13 * * *'
 
 
 jobs:
