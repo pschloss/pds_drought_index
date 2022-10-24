@@ -2,8 +2,8 @@ name: build
 
 on:
   schedule:
-    - cron:  '22 13 * * *'
-  workflow_dispatch
+    - cron:  '22 27 * * *'
+  workflow_dispatch:
 
 
 jobs:
