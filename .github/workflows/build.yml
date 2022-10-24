@@ -1,8 +1,9 @@
-name: build
+name: Run Workflow
+run-name: ${{ github.actor }} is running the workflow 🚀
 
 on:
   schedule:
-    - cron:  '50 13 * * *'
+    - cron:  '52 13 * * *'
 
 
 jobs:
