@@ -2,6 +2,7 @@ name: Run Workflow
 run-name: ${{ github.actor }} is running the workflow 🚀
 
 on:
+  push:
   schedule:
     - cron:  '0/5 * * * *'
 
