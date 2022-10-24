@@ -2,9 +2,9 @@ name: Run Workflow
 run-name: ${{ github.actor }} is running the workflow 🚀
 
 on:
-  push:
+#  push:
   schedule:
-    - cron:  '0/5 * * * *'
+    - cron:  '0 17 * * *'
 
 
 jobs:
@@ -31,8 +31,6 @@ jobs:
     - name: Which Rscript
       shell: bash
       run: |
-        chmod +x test.R
-        ./test.R
         Rscript --version
         which Rscript
         R --version
@@ -46,9 +44,8 @@ jobs:
 
     - name: setup git config
       run: |
-        # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
-        git config user.name "GitHub Actions Bot"
-        git config user.email "<>"
+        git config --local user.email "noreply@github.com"
+        git config --local user.name "GitHub"
 
     - name: commit
       run: |
